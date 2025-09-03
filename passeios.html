@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turismo Brasil - Passeios</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { line-height: 1.6; }
+
+/* Cabeçalho */
+header {
+display: flex; justify-content: space-between; align-items: center;
+padding: 15px; background: #0288d1; color: #fff; position: relative;
+}
+.logo span { color: yellow; }
+.nav-links {
+display: none; flex-direction: column; background: #0288d1;
+position: absolute; top: 60px; right: 10px; border-radius: 5px;
+}
+.nav-links a {
+padding: 10px; color: white; text-decoration: none;
+border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.nav-links a:hover { background: rgba(255,255,255,0.2); }
+.menu-toggle { font-size: 24px; cursor: pointer; user-select: none; }
+
+/* Seções */
+section { padding: 40px 20px; text-align: center; }
+section h2 { margin-bottom: 15px; color: #0288d1; }
+
+.card {
+background: #f9f9f9;
+padding: 20px;
+border-radius: 8px;
+margin-bottom: 20px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+.card h3 { margin-bottom: 10px; color: #333; }
+.card p { margin-bottom: 15px; }
+.card img {
+width: 100%; border-radius: 8px; margin-bottom: 15px;
+}
+.card .btn {
+display: inline-block; padding: 10px 20px;
+background: #0288d1; color: white;
+text-decoration: none; border-radius: 5px;
+}
+.card .btn:hover { background: #026ca0; }
+
+/* Rodapé */
+footer { background: #0288d1; color: white; padding: 15px; text-align: center; margin-top: 20px; }
+
+/* Responsivo */
+@media (min-width: 768px) {
+.nav-links { display: flex; flex-direction: row; position: static; background: none; }
+.nav-links a { border: none; margin-left: 15px; }
+.menu-toggle { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Cabeçalho -->
+<header>
+<div class="logo">Turismo<span>Brasil</span></div>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="servicos.html">Serviços</a>
+<a href="passeios.html">Passeios</a>
+<a href="#">Contato</a>
+</nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- Página Passeios -->
+<section>
+<h2>Passeios Guiados</h2>
+
+<div class="card">
+<img src="https://picsum.photos/800/400?beach" alt="Maragogi - Alagoas">
+<h3>Passeio a Maragogi - Alagoas</h3>
+<p>Saindo de Porto de Galinhas, descubra as águas cristalinas e as famosas piscinas naturais de Maragogi. Um paraíso para mergulhar e relaxar.</p>
+<a href="#" class="btn">Reservar Agora</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/800/400?rio" alt="Rio de Janeiro">
+<h3>Um Dia no Rio - Rio de Janeiro</h3>
+<p>Conheça os principais cartões-postais do Rio em um dia: Cristo Redentor, Pão de Açúcar e as belas praias cariocas.</p>
+<a href="#" class="btn">Reservar Agora</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/800/400?bahia" alt="Salvador - Bahia">
+<h3>Bahia 500 anos - Salvador</h3>
+<p>Explore a cultura, a música e a história da Bahia. Um passeio inesquecível pelo Pelourinho, igrejas coloniais e a orla de Salvador.</p>
+<a href="#" class="btn">Reservar Agora</a>
+</div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+<p>© 2025 Turismo Brasil. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+const nav = document.getElementById("navLinks");
+nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+</script>
+</body>
+</html>

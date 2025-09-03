@@ -1,0 +1,86 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body { line-height: 1.6; }
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #0288d1;
+  color: #fff;
+}
+.logo span { color: yellow; }
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #0288d1;
+  position: absolute;
+  top: 60px; right: 10px;
+}
+.nav-links a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Seções */
+.hero {
+  padding: 40px;
+  text-align: center;
+  background: url('https://picsum.photos/600/400?travel') center/cover;
+  color: #fff;
+}
+.hero h1 { font-size: 28px; }
+.hero .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: yellow;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+  background: #0288d1;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsivo Tablet/Desktop */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+  }
+  .menu-toggle { display: none; }
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}
