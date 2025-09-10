@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes Personalizados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Crie seu Pacote Personalizado</h1>
+
+        <form id="form-pacote">
+            <div class="pacote-opcao">
+                <label for="pacote">Escolha o tipo de pacote:</label>
+                <select id="pacote" name="pacote">
+                    <option value="basico">Básico - R$ 50,00</option>
+                    <option value="intermediario">Intermediário - R$ 100,00</option>
+                    <option value="premium">Premium - R$ 200,00</option>
+                </select>
+            </div>
+
+            <div class="pacote-opcao">
+                <label>Adicione Extras:</label>
+                <input type="checkbox" id="extra1" name="extra1"> Wi-Fi Gratuito (R$ 20,00)<br>
+                <input type="checkbox" id="extra2" name="extra2"> Café da manhã incluso (R$ 15,00)<br>
+                <input type="checkbox" id="extra3" name="extra3"> Transfer para o aeroporto (R$ 50,00)
+            </div>
+
+            <button type="button" onclick="calcularPreco()">Calcular Preço</button>
+        </form>
+
+        <div id="resultado">
+            <h2>Resumo do Pacote:</h2>
+            <p id="descricao"></p>
+            <p id="preco">Preço Total: R$ 0,00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
