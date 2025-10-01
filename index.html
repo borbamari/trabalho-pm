@@ -1,172 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mari Turismo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mari Turismo</title>
 
-<!-- CSS interno -->
-<style>
-* {
-margin: 0; padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
-}
-body { line-height: 1.6; }
+    <!-- CSS interno -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-/* Cabeçalho */
-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 15px;
-background: #0288d1;
-color: #fff;
-position: relative;
-}
-.logo span { color: yellow; }
-.nav-links {
-display: none;
-flex-direction: column;
-background: #0288d1;
-position: absolute;
-top: 60px; right: 10px;
-border-radius: 5px;
-}
-.nav-links a {
-padding: 10px;
-color: white;
-text-decoration: none;
-border-bottom: 1px solid rgba(255,255,255,0.3);
-}
-.nav-links a:hover { background: rgba(255,255,255,0.2); }
-.menu-toggle {
-font-size: 24px;
-cursor: pointer;
-user-select: none;
-}
+        body {
+            line-height: 1.6;
+        }
 
-/* Seção Hero */
-.hero {
-padding: 60px 20px;
-text-align: center;
-background: url('https://picsum.photos/600/400?travel') center/cover;
-color: #fff;
-}
-.hero h1 { font-size: 32px; margin-bottom: 10px; }
-.hero p { font-size: 18px; margin-bottom: 15px; }
-.hero .btn {
-display: inline-block;
-padding: 12px 25px;
-background: yellow;
-color: black;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
-}
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #0288d1;
+            color: #fff;
+            position: relative;
+        }
 
-/* Seções gerais */
-section { padding: 30px 20px; text-align: center; }
-section h2 { margin-bottom: 15px; }
+        .logo span {
+            color: yellow;
+        }
 
-.cards {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-}
-.card {
-background: #f0f0f0;
-padding: 20px;
-border-radius: 8px;
-font-weight: bold;
-}
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background: #0288d1;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            border-radius: 5px;
+        }
 
-/* Rodapé */
-footer {
-background: #0288d1;
-color: white;
-padding: 15px;
-text-align: center;
-margin-top: 20px;
-}
+        .nav-links a {
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
 
-/* Responsivo Tablet/Desktop */
-@media (min-width: 768px) {
-.nav-links {
-display: flex;
-flex-direction: row;
-position: static;
-background: none;
-}
-.nav-links a {
-border: none;
-margin-left: 15px;
-}
-.menu-toggle { display: none; }
-.cards { grid-template-columns: repeat(4, 1fr); }
-}
-</style>
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Seção Hero */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: url('https://picsum.photos/600/400?travel') center/cover;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: yellow;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Seções gerais */
+        section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .card {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #0288d1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Responsivo Tablet/Desktop */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background: none;
+            }
+
+            .nav-links a {
+                border: none;
+                margin-left: 15px;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
 </head>
+
 <body>
-<!-- Cabeçalho -->
-<header>
-<div class="logo">Mari>Turismo></div>
-<nav class="nav-links" id="navLinks">
-<a href="#">Home</a>
-<a href="#">Contato</a>
-</nav>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Mari Turismo</div>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
 
-<!-- Seção Hero -->
-<section class="hero">
-<h1>Descubra o Brasil</h1>
-<p>Explore lugares incríveis e viva experiências únicas.</p>
-<a href="#" class="btn">Ver Destinos</a>
-</section>
+    <!-- Seção Hero -->
+    <section class="hero">
+        <h1>Descubra o Brasil</h1>
+        <p>Explore lugares incríveis e viva experiências únicas.</p>
+        <a href="#" class="btn">Ver Destinos</a>
+    </section>
 
-<!-- Seção Sobre -->
-<section class="sobre">
-<h2>Sobre Nós</h2>
-<p>Somos especialistas em turismo no Brasil, levando você a aventuras inesquecíveis.</p>
-</section>
+    <!-- Seção Sobre -->
+    <section class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em turismo no Brasil, levando você a aventuras inesquecíveis.</p>
+    </section>
 
-<!-- Seção Serviços -->
-<section class="servicos">
-<h2>Nossos Serviços</h2>
-<div class="cards">
-<a href="passeios.html">
-<div class="card">Passeios</div>
-</a>
+    <!-- Seção Serviços -->
+    <section class="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+            <a href="passeios.html">
+                <div class="card">Passeios</div>
+            </a>
 
-<a href="pacotes.html">Pacotes Personalizados</a>
-<a href="hospedagem.html">
-    <div class="card">Hospedagem</div>
-</a>
+            <a href="pacotes.html">
+                <div class="card">
+                    Pacotes Personalizados
+                </div>
+            </a>
+            <a href="hospedagem.html">
+                <div class="card">Hospedagem</div>
+            </a>
+        </div>
+    </section>
 
+    <!-- Seção Depoimentos -->
+    <section class="depoimentos">
+        <h2>O que dizem nossos clientes</h2>
+        <blockquote>"Uma experiência inesquecivel com a família! – Maria, RJ"</blockquote>
+        <blockquote>"Viagem perfeita e bem organizada! – João, SP"</blockquote>
+    </section>
 
-<div class="card">Transporte</div>
-</div>
-</section>
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 Mari Turismo. Todos os direitos reservados.</p>
+    </footer>
 
-<!-- Seção Depoimentos -->
-<section class="depoimentos">
-<h2>O que dizem nossos clientes</h2>
-<blockquote>"Uma experiência inesquecivel com a família! – Maria, RJ"</blockquote>
-<blockquote>"Viagem perfeita e bem organizada! – João, SP"</blockquote>
-</section>
-
-<!-- Rodapé -->
-<footer>
-<p>© 2025 Mari Turismo. Todos os direitos reservados.</p>
-</footer>
-
-<!-- JavaScript interno -->
-<script>
-function toggleMenu() {
-const nav = document.getElementById("navLinks");
-nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-}
-</script>
+    <!-- JavaScript interno -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
 </body>
+
 </html>
